@@ -13,20 +13,71 @@
 
 <body>
 
-    <section class="section menu width">
+    <nav class="flex subnav">
+        <a href="index.html">Coffee & co.</a>
+        <ul class="mobile-menu flex">
+            <li style="--i:1;"><a href="about.html" class="links">About</a></li>
+            <li style="--i:2;"><a href="menu.html" class="links active">Menu</a></li>
+            <li style="--i:3;"><a href="blog.html" class="links">Blog</a></li>
+            <li style="--i:4;"><a href="contact.html" class="links">Contact</a></li>
+            <li style="--i:5;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
+            <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
+            <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <section class="section menu text-center width">
         <h2>メニュー</h2>
+        <h3>Coffee & co. で、もう一杯飲みたくなる味と出逢う</h3>
         <div class="menu-filter flex my-2">
-            <button class="filter-btn" type="button" data-category="coffee"><i
+            <button class="filter-btn flex-center" type="button" data-category="coffee"><i
                     class="fa-solid fa-mug-saucer"></i>コーヒー</button>
-            <button class="filter-btn" type="button" data-category="food"><i
+            <button class="filter-btn flex-center" type="button" data-category="food"><i
                     class="fa-solid fa-utensils"></i>サンドイッチ</button>
-            <button class="filter-btn" type="button" data-category="dessert"><i
+            <button class="filter-btn flex-center" type="button" data-category="dessert"><i
                     class="fa-solid fa-ice-cream"></i>デザート</button>
+            <button class="filter-btn flex-center" type="button" data-category="bean"><i
+                    class="fa-solid fa-seedling"></i>コーヒー豆</button>
         </div>
         <div class="menu-item grid-4">
         </div>
     </section>
 
+    <footer class="flex">
+        <div class="footer-left">
+            <h1>Coffee & co.</h1>
+            <p class="my-2">「飲みたいコーヒーと出逢う」</p>
+            <ul class="icons">
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-line"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-middle">
+            <ul>
+                <li>Coffee & co.について</li>
+                <li><a href="about.html">ー　ストーリー</a></li>
+                <li><a href="menu.html">ー　メニュー</a></li>
+                <li><a href="blog.html">ー　ブログ</a></li>
+                <li><a href="contact.html">ー　お問い合せ</a></li>
+                <li><a>ー　プライバシーポリシー</a></li>
+            </ul>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li>店舗情報</li>
+                <li><i class="fa-solid fa-square-phone-flip"></i>0422.22.2244</li>
+                <li><i class="fa-solid fa-square-envelope"></i>coffee&co@contact.com</li>
+                <li><i class="fa-solid fa-location-dot"></i>〒101-0063<br>東京都千代田区 神田淡路町1-1-1</li>
+            </ul>
+        </div>
+    </footer>
 
 
 
@@ -185,6 +236,27 @@
                 'title': 'ティラミス',
                 'price': '450',
                 'category': 'dessert',
+            },
+            {
+                'id': 22,
+                'img': 'img/menu/bean/01.jpeg',
+                'title': 'ダークロースト',
+                'price': '900',
+                'category': 'bean',
+            },
+            {
+                'id': 23,
+                'img': 'img/menu/bean/02.jpeg',
+                'title': 'ミディアムロースト',
+                'price': '800',
+                'category': 'bean',
+            },
+            {
+                'id': 24,
+                'img': 'img/menu/bean/03.jpeg',
+                'title': 'カフェインレス',
+                'price': '800',
+                'category': 'bean',
             },
         ]
 

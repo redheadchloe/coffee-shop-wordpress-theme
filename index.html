@@ -13,19 +13,22 @@
 
 <body>
     <div class="bg mb-10">
-        <nav>
+        <nav class="flex">
             <a href="index.html">Coffee & co.</a>
-            <ul class="links flex">
-                <li><a href="">About</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Blog</a></li>
-                <li><a href="">Contact</a></li>
+            <ul class="mobile-menu flex">
+                <li style="--i:1;"><a href="about.html" class="links">About</a></li>
+                <li style="--i:2;"><a href="menu.html" class="links">Menu</a></li>
+                <li style="--i:3;"><a href="blog.html" class="links">Blog</a></li>
+                <li style="--i:4;"><a href="contact.html" class="links">Contact</a></li>
+                <li style="--i:5;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
+                <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
+                <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
             </ul>
-            <ul class="icons flex">
-                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-line"></i></a></li>
-            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
         <div class="key text-center">
             <h1 class="mb-2">飲みたいコーヒーと出逢う</h1>
@@ -57,9 +60,7 @@
         <div class="about-wrapper grid">
             <div class="about-left text-center">
                 <h2>Coffee & co. について</h2>
-                <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ab animi impedit
-                    delectus iste
-                    voluptatum ut dolore, laborum ratione fugit.</p>
+                <p class="mb-2">自分にぴったりのコーヒー、Coffee & co. で見つかる。</p>
                 <a href="">もっと見る</a>
             </div>
             <div class="about-right grid">
@@ -119,7 +120,7 @@
 
     <section class="promo flex">
         <div class="promo-left">
-            <h2>コーヒー全商品20％オフキャンペーン中</h2>
+            <h2>コーヒー豆全商品20％オフキャンペーン中</h2>
             <a href="">もっと見る</a>
         </div>
         <div class="promo-right">
@@ -196,11 +197,11 @@
         <div class="footer-middle">
             <ul>
                 <li>Coffee & co.について</li>
-                <li><a href="">ー　ストーリー</a></li>
-                <li><a href="">ー　メニュー</a></li>
-                <li><a href="">ー　ブログ</a></li>
-                <li><a href="">ー　お問い合せ</a></li>
-                <li><a href="">ー　プライバシーポリシー</a></li>
+                <li><a href="about.html">ー　ストーリー</a></li>
+                <li><a href="menu.html">ー　メニュー</a></li>
+                <li><a href="blog.html">ー　ブログ</a></li>
+                <li><a href="contact.html">ー　お問い合せ</a></li>
+                <li><a>ー　プライバシーポリシー</a></li>
             </ul>
         </div>
         <div class="footer-right">

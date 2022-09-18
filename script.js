@@ -1,3 +1,10 @@
+const mobileNav = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.mobile-menu');
+mobileNav.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+})
+
 
 
 const news = [

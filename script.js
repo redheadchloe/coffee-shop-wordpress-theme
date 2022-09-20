@@ -21,7 +21,9 @@ date.innerHTML = new Date().getFullYear();
 
 // key
 const keys = document.querySelectorAll('.key *');
+const preloader = document.querySelector('.preloader');
 window.addEventListener('DOMContentLoaded', () => {
+    preloader.style.display = 'none';
     keys.forEach(key => {
         key.classList.add('active');
     })

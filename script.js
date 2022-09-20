@@ -5,6 +5,15 @@ mobileNav.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
 })
 
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 20) {
+        nav.classList.add('shrinked');
+    } else {
+        nav.classList.remove('shrinked');
+    }
+})
+
 // footer get year
 const date = document.querySelector('#date');
 date.innerHTML = new Date().getFullYear();

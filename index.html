@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee & co.</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -31,9 +32,9 @@
             </div>
         </nav>
         <div class="key text-center">
-            <h1 class="mb-2">飲みたいコーヒーと出逢う</h1>
-            <p>Coffee & co. なら、あなたのコーヒーが必ず見つかります</p>
-            <div class="btn my-2">
+            <h1 style="--i:1;" class="mb-2">飲みたいコーヒーと出逢う</h1>
+            <p style="--i:2;">Coffee & co. なら、あなたのコーヒーが必ず見つかります</p>
+            <div class="btn my-2" style="--i:3;">
                 <a href="menu.html">メニューを見る</a>
             </div>
         </div>
@@ -56,12 +57,12 @@
         </div>
     </div>
 
-    <section class="section">
+    <section class="section width">
         <div class="about-wrapper grid">
             <div class="about-left text-center">
                 <h2>Coffee & co. について</h2>
                 <p class="mb-2">自分にぴったりのコーヒー、Coffee & co. で見つかる。</p>
-                <a href="">もっと見る</a>
+                <a href="about.html">もっと見る</a>
             </div>
             <div class="about-right grid">
                 <img src="img/img1.jpeg" alt="">
@@ -78,7 +79,7 @@
     </div>
 
 
-    <section class="section menus width">
+    <section class="section menus width text-center">
         <h2>メニュー</h2>
         <div class="menu grid-4">
             <figure>
@@ -91,9 +92,10 @@
                 <figcaption>デザート</figcaption>
             </figure>
             <figure>
-                <figcaption>メニューへ</figcaption>
+                <figcaption>コーヒー豆</figcaption>
             </figure>
         </div>
+        <a class="my-2" href="menu.html">メニューを見る</a>
     </section>
 
 
@@ -108,12 +110,12 @@
     </section>
 
 
-    <section class="section features width">
+    <section class="section features width-fit">
         <h2>Coffee & co. のこだわり</h2>
-        <div class="feature grid-4">
+        <div class="feature grid">
             <div class="feature-item" data-text="世界各国の産地から選ぶ"><i class="fa-solid fa-earth-africa"></i></div>
-            <div class="feature-item" data-text="飲み比べサブスクサービス"><i class="fa-solid fa-truck"></i></div>
-            <div class="feature-item" data-text="コーヒーに役立ち情報を発信中"><i class="fa-regular fa-bookmark"></i></div>
+            <div class="feature-item" data-text="飲み比で新たなコーヒーと出逢う"><i class="fa-regular fa-face-smile"></i></div>
+            <div class="feature-item" data-text="コーヒーに合う心地よい空間作り"><i class="fa-solid fa-couch"></i></div>
             <div class="feature-item" data-text="メニューを１から開発"><i class="fa-solid fa-mug-hot"></i></div>
         </div>
     </section>
@@ -143,36 +145,39 @@
         </div>
     </section>
 
-    <section class="section blogs width grid">
-        <div class="blog-left">
-            <div class="title text-center">
-                <p>コーヒーをもっと楽しむ</p>
-                <h2>Coffee & co. のブログ</h2>
-                <a href="">もっと見る</a>
-            </div>
-            <div class="left-blogs grid">
+    <section class="section blogs width">
+        <p class="text-center">コーヒーをもっと楽しむ</p>
+        <h2>Coffee & co. の記事</h2>
+        <div class="blog grid">
+            <div class="left grid">
                 <div class="blog-item">
                     <img src="img/blog/01.jpeg" alt="">
-                    <h4>コーヒー豆について</h4>
+                    <small><time>2022.09.18</time></small>
+                    <h4>コーヒー豆の知らない事情</h4>
                 </div>
                 <div class="blog-item">
                     <img src="img/blog/02.jpeg" alt="">
+                    <small><time>2022.09.11</time></small>
                     <h4>秋におすすめコーヒー10選</h4>
                 </div>
                 <div class="blog-item">
                     <img src="img/blog/04.jpeg" alt="">
+                    <small><time>2022.09.04</time></small>
                     <h4>コーヒーと食べ合わせの良いメニュー</h4>
                 </div>
                 <div class="blog-item">
                     <img src="img/blog/05.jpeg" alt="">
+                    <small><time>2022.08.28</time></small>
                     <h4>変わったコーヒーの飲み方とは</h4>
                 </div>
             </div>
+            <div class="right blog-item">
+                <img src="img/blog/03.jpeg" alt="">
+                <small><time>2022.08.21</time></small>
+                <h4>最新コーヒートレンド！ミルクブリューとは？</h4>
+            </div>
         </div>
-        <div class="blog-right blog-item">
-            <img src="img/blog/03.jpeg" alt="">
-            <h4>最新コーヒートレンド！ ミルクブリューとは？</h4>
-        </div>
+        <div class="text-center"><a href="blog.html" class="my-2">もっと見る</a></div>
     </section>
 
     <section class="anns section width">
@@ -184,35 +189,42 @@
     </section>
 
 
-    <footer class="flex">
-        <div class="footer-left">
-            <h1>Coffee & co.</h1>
-            <p class="my-2">「飲みたいコーヒーと出逢う」</p>
-            <ul class="icons">
-                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-line"></i></a></li>
-            </ul>
+    <footer>
+        <div class="flex">
+            <div class="footer-left">
+                <h1>Coffee & co.</h1>
+                <p class="my-2">「飲みたいコーヒーと出逢う」</p>
+                <ul class="icons">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-line"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li>Coffee & co.について</li>
+                    <li><a href="about.html">ー　ストーリー</a></li>
+                    <li><a href="menu.html">ー　メニュー</a></li>
+                    <li><a href="blog.html">ー　記事一覧</a></li>
+                    <li><a href="contact.html">ー　お問い合せ</a></li>
+                    <li><a>ー　プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li>店舗情報</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i>0422.22.2244</li>
+                    <li><i class="fa-solid fa-square-envelope"></i>coffee&co@contact.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>〒101-0063<br>東京都千代田区 神田淡路町1-1-1</li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-middle">
-            <ul>
-                <li>Coffee & co.について</li>
-                <li><a href="about.html">ー　ストーリー</a></li>
-                <li><a href="menu.html">ー　メニュー</a></li>
-                <li><a href="blog.html">ー　ブログ</a></li>
-                <li><a href="contact.html">ー　お問い合せ</a></li>
-                <li><a>ー　プライバシーポリシー</a></li>
-            </ul>
-        </div>
-        <div class="footer-right">
-            <ul>
-                <li>店舗情報</li>
-                <li><i class="fa-solid fa-square-phone-flip"></i>0422.22.2244</li>
-                <li><i class="fa-solid fa-square-envelope"></i>coffee&co@contact.com</li>
-                <li><i class="fa-solid fa-location-dot"></i>〒101-0063<br>東京都千代田区 神田淡路町1-1-1</li>
-            </ul>
-        </div>
+
+        <small>&copy; <span id="date"></span> Coffee & co. All rights reserved. </small>
     </footer>
+
+    <button id="top">TOP</button>
+
     <script src="script.js"></script>
 </body>
 

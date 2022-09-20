@@ -1,0 +1,144 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & co.</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <nav class="flex subnav">
+        <a href="index.html">Coffee & co.</a>
+        <ul class="mobile-menu flex">
+            <li style="--i:1;"><a href="about.html" class="links">About</a></li>
+            <li style="--i:2;"><a href="menu.html" class="links">Menu</a></li>
+            <li style="--i:3;"><a href="blog.html" class="links active">Blog</a></li>
+            <li style="--i:4;"><a href="contact.html" class="links">Contact</a></li>
+            <li style="--i:5;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
+            <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
+            <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <section class="section width blog">
+        <h2>Coffee & co. の記事一覧</h2>
+        <p class="text-center my-2">新たなコーヒーとの出逢いを求めて、コーヒーにまつわる豆知識やお役立ち情報をお届け。</p>
+        <div class="btn my-2 flex-center">
+            <button>#コーヒーを知る</button>
+            <button>#コーヒーを楽しむ</button>
+            <button>#コーヒーレシピ</button>
+            <button>#コーヒーとスイーツ</button>
+            <button>#コーヒーと道具</button>
+        </div>
+        <div class="blog-wrapper grid-4">
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="flex">
+            <div class="footer-left">
+                <h1>Coffee & co.</h1>
+                <p class="my-2">「飲みたいコーヒーと出逢う」</p>
+                <ul class="icons">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-line"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li>Coffee & co.について</li>
+                    <li><a href="about.html">ー　ストーリー</a></li>
+                    <li><a href="menu.html">ー　メニュー</a></li>
+                    <li><a href="blog.html">ー　記事一覧</a></li>
+                    <li><a href="contact.html">ー　お問い合せ</a></li>
+                    <li><a>ー　プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li>店舗情報</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i>0422.22.2244</li>
+                    <li><i class="fa-solid fa-square-envelope"></i>coffee&co@contact.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>〒101-0063<br>東京都千代田区 神田淡路町1-1-1</li>
+                </ul>
+            </div>
+        </div>
+
+        <small>&copy; <span id="date"></span> Coffee & co. All rights reserved. </small>
+    </footer>
+
+    <button id="top">TOP</button>
+
+
+
+    <script>
+        blog = [
+            {
+                'img': 'img/blog/01.jpeg',
+                'date': '2022.09.18',
+                'title': 'コーヒー豆の知らない事情',
+            },
+            {
+                'img': 'img/blog/02.jpeg',
+                'date': '2022.09.11',
+                'title': '秋におすすめコーヒー10選',
+            },
+            {
+                'img': 'img/blog/04.jpeg',
+                'date': '2022.09.14',
+                'title': 'コーヒーと食べ合わせの良いメニュー',
+            },
+            {
+                'img': 'img/blog/05.jpeg',
+                'date': '2022.08.28',
+                'title': '変わったコーヒーの飲み方とは',
+            },
+            {
+                'img': 'img/blog/03.jpeg',
+                'date': '2022.08.21',
+                'title': '最新コーヒートレンド！ミルクブリューとは？',
+            },
+            {
+                'img': 'img/blog/06.jpeg',
+                'date': '2022.08.14',
+                'title': '夏に人気の水出しコーヒー、その作り方とは？',
+            },
+            {
+                'img': 'img/blog/07.jpeg',
+                'date': '2022.08.07',
+                'title': 'コーヒーをテーマにした夏休みの自由研究×5選',
+            },
+            {
+                'img': 'img/blog/08.jpeg',
+                'date': '2022.07.31',
+                'title': 'コーヒーの皮と実からできるお茶の味は？アレンジレシピも',
+            },
+        ]
+
+        const blogWrapper = document.querySelector('.blog-wrapper');
+        for (let i = 0; i < blog.length; i++) {
+            blogWrapper.innerHTML += `<div class="blog-item">
+                <img src="${blog[i].img}" alt="blog thumbnail">
+                <small><time>${blog[i].date}</time></small>
+                <h4>${blog[i].title}</h4>
+            </div>`
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & co.</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="bg page mb-50">
+        <nav class="flex dk">
+            <a href="index.html">Coffee & co.</a>
+            <ul class="mobile-menu flex">
+                <li style="--i:1;"><a href="about.html" class="links">About</a></li>
+                <li style="--i:2;"><a href="menu.html" class="links">Menu</a></li>
+                <li style="--i:3;"><a href="blog.html" class="links">Blog</a></li>
+                <li style="--i:4;"><a href="contact.html" class="links active">Contact</a></li>
+                <li style="--i:5;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
+                <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
+                <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <section class="section contact width">
+            <h1 class="text-center">お問い合せ</h1>
+            <p class="text-center my-2">Coffee & co.にご関心を寄せていただきありがとうございます。<br>
+                お問い合わせにつきましては、以下のフォームをご送付いただいた後、弊店の担当者からご連絡差し上げます。</p>
+            <div class="form grid my-2">
+                <img src="img/contact.jpeg" alt="">
+                <form action="">
+                    <div class=" form-control">
+                        <label for="lname">姓：</label>
+                        <input type="text" name="lastname" id="lname" placeholder="例：田中" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="fname">名：</label>
+                        <input type="text" name="firstname" id="fname" placeholder="例：太郎" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="email">メールアドレス：</label>
+                        <input type="text" name="email" id="email" placeholder="例：example@email.com" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="subject">内容：</label>
+                        <select id="subject" name="subject">
+                            <option value="products">商品について</option>
+                            <option value="shop">お店について</option>
+                            <option value="others">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-control">
+                        <label for="comment">メッセージ：</label>
+                        <textarea name="comment" id="comment" required>こちらにお問い合せ内容をご入力ください。</textarea>
+                    </div>
+                    <input type="submit" value="確認画面へ">
+                </form>
+            </div>
+        </section>
+    </div>
+
+
+
+
+    <footer>
+        <div class="flex">
+            <div class="footer-left">
+                <h1>Coffee & co.</h1>
+                <p class="my-2">「飲みたいコーヒーと出逢う」</p>
+                <ul class="icons">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-line"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li>Coffee & co.について</li>
+                    <li><a href="about.html">ー　ストーリー</a></li>
+                    <li><a href="menu.html">ー　メニュー</a></li>
+                    <li><a href="blog.html">ー　記事一覧</a></li>
+                    <li><a href="contact.html">ー　お問い合せ</a></li>
+                    <li><a>ー　プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li>店舗情報</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i>0422.22.2244</li>
+                    <li><i class="fa-solid fa-square-envelope"></i>coffee&co@contact.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>〒101-0063<br>東京都千代田区 神田淡路町1-1-1</li>
+                </ul>
+            </div>
+        </div>
+
+        <small>&copy; <span id="date"></span> Coffee & co. All rights reserved. </small>
+    </footer>
+    <button id="top">TOP</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

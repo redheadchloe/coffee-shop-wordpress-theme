@@ -5,7 +5,31 @@ mobileNav.addEventListener('click', () => {
     mobileMenu.classList.toggle('active');
 })
 
+// footer get year
+const date = document.querySelector('#date');
+date.innerHTML = new Date().getFullYear();
 
+
+// key
+const keys = document.querySelectorAll('.key *');
+window.addEventListener('DOMContentLoaded', () => {
+    keys.forEach(key => {
+        key.classList.add('active');
+    })
+})
+
+// to top
+const topBtn = document.querySelector('#top');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 500) {
+        topBtn.classList.add('on');
+    } else {
+        topBtn.classList.remove('on');
+    }
+})
+topBtn.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+})
 
 const news = [
     {

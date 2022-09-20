@@ -1,0 +1,110 @@
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee & co.</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="bg page mb-20">
+        <nav class="flex dk mb-10">
+            <a href="index.html">Coffee & co.</a>
+            <ul class="mobile-menu flex">
+                <li style="--i:1;"><a href="about.html" class="links active">About</a></li>
+                <li style="--i:2;"><a href="menu.html" class="links">Menu</a></li>
+                <li style="--i:3;"><a href="blog.html" class="links">Blog</a></li>
+                <li style="--i:4;"><a href="contact.html" class="links">Contact</a></li>
+                <li style="--i:5;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
+                <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
+                <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <section class="about width grid">
+            <div class="vertical">
+                <img src="img/about.jpeg" alt="">
+            </div>
+            <div class="concept text-center">
+                <h2>Coffee & co. のストーリー</h2>
+                <p>2020年にオープンした東京都千代田区神田淡路町にある自家焙煎コーヒー店「Coffee &
+                    co.」。<br>「飲みたいコーヒーと出逢う」をコンセプトに、<br> 丁寧な焙煎を経た豆、豆本来の味わいと香り、コクで出逢いをお届け。<br>Coffee & co.
+                    で、きっと、飲みたいコーヒーに出逢える。</p>
+            </div>
+        </section>
+    </div>
+
+    <section class="action width">
+        <h2>「飲みたいコーヒーと出逢う」を実現</h2>
+        <div class="grid-4">
+            <article class="01">
+                <img src="img/action/01.jpeg" alt="">
+                <p class="p-2">世界各国から厳選し届いたコーヒー鮮度と風味を保つために豆は挽かずを生豆でストック。産地に足を運び目利きした、選りすぐりの世界のコーヒーと出逢いをお客様にお届けします。</p>
+            </article>
+            <article class="02">
+                <img src="img/action/02.jpeg" alt="">
+                <p class="p-2">Coffee & co. は、世界中で生産されている中でお客様のこのいにあったコーヒーに出逢うためのお手伝いをいたします。飲み比べセットを、お試し価格でご提供させていただきます。
+                </p>
+            </article>
+            <article class="03">
+                <img src="img/action/03.jpeg" alt="">
+                <p class="p-2">Coffee & co. は、コーヒーとの出逢いを求めるお客様に、「コーヒーがもたらす新たな瞬間」を体験していただきたいと考えコーヒーを愉しむための空間を作りいたしました。
+                </p>
+            </article>
+            <article class="04">
+                <img src="img/action/04.jpeg" alt="">
+                <p class="p-2">コーヒーが飲めない、苦手な人でも飲めるメニューから、コーヒーにある、相性に良い食べ物まで、全てが１から開発。作り手の想いを、コーヒーで繋ぎます。</p>
+            </article>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="flex">
+            <div class="footer-left">
+                <h1>Coffee & co.</h1>
+                <p class="my-2">「飲みたいコーヒーと出逢う」</p>
+                <ul class="icons">
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-line"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <ul>
+                    <li>Coffee & co.について</li>
+                    <li><a href="about.html">ー　ストーリー</a></li>
+                    <li><a href="menu.html">ー　メニュー</a></li>
+                    <li><a href="blog.html">ー　記事一覧</a></li>
+                    <li><a href="contact.html">ー　お問い合せ</a></li>
+                    <li><a>ー　プライバシーポリシー</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li>店舗情報</li>
+                    <li><i class="fa-solid fa-square-phone-flip"></i>0422.22.2244</li>
+                    <li><i class="fa-solid fa-square-envelope"></i>coffee&co@contact.com</li>
+                    <li><i class="fa-solid fa-location-dot"></i>〒101-0063<br>東京都千代田区 神田淡路町1-1-1</li>
+                </ul>
+            </div>
+        </div>
+
+        <small>&copy; <span id="date"></span> Coffee & co. All rights reserved. </small>
+    </footer>
+    <button id="top">TOP</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

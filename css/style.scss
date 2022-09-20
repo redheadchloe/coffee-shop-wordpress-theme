@@ -30,6 +30,12 @@ i {
     font-size: 1.5rem;
 }
 
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -37,6 +43,7 @@ h4,
 h5,
 h6 {
     font-weight: normal;
+    word-break: keep-all;
 }
 
 // common 
@@ -78,6 +85,11 @@ h6 {
     margin: auto;
 }
 
+.width-fit {
+    width: fit-content;
+    margin: auto;
+}
+
 section,
 .section {
     padding: 8vh 5vw;
@@ -110,6 +122,18 @@ section,
 
 .mb-10 {
     margin-bottom: 10vh;
+}
+
+.mb-20 {
+    margin-bottom: 20vh;
+}
+
+.mb-50 {
+    margin-bottom: 50vh;
+}
+
+.p-2 {
+    padding: 2rem;
 }
 
 .p-4 {
@@ -147,7 +171,6 @@ h2 {
     padding-bottom: .5rem;
     margin-bottom: 2rem;
     font-size: 2rem;
-    word-break: keep-all;
 
     &::after {
         content: '';
@@ -170,6 +193,18 @@ nav {
     a {
         color: #fff;
         font-size: 1.2rem;
+    }
+
+    &.dk {
+        .mobile-menu {
+            li {
+                a.links {
+                    &.active::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 
     &.subnav {
@@ -244,6 +279,14 @@ nav {
         top: 50%;
         transform: translate(-50%, -50%);
 
+        & * {
+            opacity: 0;
+
+            &.active {
+                animation: reveal .6s ease-in forwards;
+                animation-delay: calc(.8s * var(--i));
+            }
+        }
 
         p {
             font-size: 1.5rem;
@@ -365,6 +408,7 @@ nav {
             &:last-of-type {
                 background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .05)), url(../img/menu04.jpeg) center no-repeat;
                 background-size: cover;
+                cursor: pointer;
             }
 
             &:hover {
@@ -417,9 +461,9 @@ nav {
             width: 100%;
             position: relative;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            animation: opacity .4s ease-in;
+            animation: opacity .6s ease-in;
 
-            @keyframes shadow-drop-2-center {
+            @keyframes opacity {
                 0% {
                     opacity: .4;
                 }
@@ -452,12 +496,9 @@ nav {
 
         .btn {
             button {
-                border: none;
-                background: none;
                 color: var(--primary);
                 z-index: 100;
                 position: absolute;
-                cursor: pointer;
                 top: 50%;
 
                 &:hover i {
@@ -488,14 +529,14 @@ nav {
 
 // feature
 .features {
+
     .feature-item {
-        width: 300px;
+        width: 400px;
         height: 300px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         position: relative;
         display: grid;
-        place-items: center;
-        cursor: pointer;
+        place-items: start center;
 
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
@@ -503,31 +544,43 @@ nav {
 
         i {
             display: block;
-            font-size: 3rem;
-            transform: translateY(-100%);
+            font-size: 1.6rem;
+            margin-top: 2rem;
         }
 
         &::after {
             position: absolute;
             content: attr(data-text);
             font-size: 1.2rem;
-            transform: translateY(100%);
+            transform: translateY(200%);
         }
 
-        &:nth-of-type(odd) {
-            background: var(--primary);
-        }
-
-        &:nth-of-type(even) {
-            background: url(../img/feature.jpeg) center no-repeat;
+        &:nth-of-type(3) {
+            background: url(../img/feature/feature01.jpeg) center no-repeat;
             background-size: cover;
             color: #fff;
+        }
+
+        &:nth-of-type(2) {
+            background: url(../img/feature/feature.jpeg) center no-repeat;
+            background-size: cover;
+            color: #fff;
+        }
+
+        &:last-of-type {
+            background: url(../img/feature/feature02.jpeg) center right no-repeat;
+            background-size: cover;
+        }
+
+        &:first-of-type {
+            background: url(../img/feature/feature03.jpeg) center right no-repeat;
+            background-size: cover;
         }
     }
 }
 
 .promo {
-    padding: 0;
+    padding: 10vh 0;
 
     div {
         width: 50vw;
@@ -563,9 +616,6 @@ nav {
 .voices {
     .voice {
         .voice-item {
-            width: 50vw;
-            height: 400px;
-            margin: auto;
             background: var(--primary);
             box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
             display: none;
@@ -622,40 +672,29 @@ nav {
 
 // blogs
 .blogs {
-    &.grid {
-        align-items: end;
+    .grid {
+        align-items: start;
     }
 
 
-    .blog-left {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
-
-        .left-blogs {
-            margin-top: 5rem;
-
-            .blog-item {
-                img {
-                    width: 300px;
-                }
-            }
-        }
-    }
-
-    .blog-right {
-        img {
-            width: 500px;
-        }
-    }
 
     .blog-item {
         cursor: pointer;
 
+        small {
+            display: block;
+        }
+
+        img {
+            width: 300px;
+            object-fit: cover;
+        }
+
         &:hover {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
             h4 {
                 text-decoration: underline;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             }
         }
     }
@@ -663,11 +702,6 @@ nav {
 
 // annoucement
 .anns {
-    &.width {
-        width: 60vw;
-        margin: auto;
-    }
-
     .ann {
         overflow: hidden;
 
@@ -723,8 +757,9 @@ footer {
     padding: 5vh 5vw;
     background: var(--primary);
     color: #fff;
+    position: relative;
 
-    &.flex {
+    .flex {
         align-items: flex-start;
     }
 
@@ -749,6 +784,90 @@ footer {
     a {
         color: #fff;
     }
+
+    small {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        word-break: keep-all;
+        transform: translateX(-50%);
+    }
+}
+
+#top {
+    background: #333;
+    color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    position: fixed;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    right: 1%;
+    bottom: 100%;
+    border-radius: 5px;
+
+    &.on {
+        bottom: 2%;
+        transition: .3s ease-in;
+    }
+}
+
+
+// about page
+.page {
+    .about {
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        color: #333;
+
+        img {
+            max-width: 500px;
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+        }
+
+        &.grid {
+            place-items: start center;
+        }
+
+
+        .vertical {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                display: block;
+                content: 'Coffee & co.';
+                bottom: 0;
+                left: -108;
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                font-size: 6rem;
+            }
+        }
+
+        .concept {
+            line-height: 2;
+        }
+    }
+}
+
+.action {
+
+    .grid-4 {
+        align-items: flex-start;
+    }
+
+    article {
+        width: 300px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    }
+
+    img {
+        width: 300px;
+        height: 400px;
+    }
 }
 
 
@@ -758,10 +877,10 @@ footer {
 
 
 
-
-
-// menu
+// menu page
 .menu {
+
+
 
     .menu-filter {
         &.flex {
@@ -769,12 +888,10 @@ footer {
         }
 
         button {
-            background: none;
             border: 1px solid var(--primary);
             width: 100%;
             padding: .6rem;
             font-size: 1rem;
-            cursor: pointer;
             color: var(--primary);
 
             &:hover,
@@ -799,24 +916,8 @@ footer {
         position: relative;
 
         &.active {
-            animation: slide-top 1s ease-in-out;
+            animation: reveal 1s ease-in-out;
 
-            @keyframes slide-top {
-                0% {
-                    opacity: 0;
-                    transform: translateY(50%);
-                }
-
-                80% {
-                    opacity: 0.5;
-                    transform: translateY(-10px);
-                }
-
-                100% {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
         }
 
         img {
@@ -841,7 +942,112 @@ footer {
     }
 }
 
-@media screen and (max-width:600px) {
+// blog page
+.blog {
+    .flex-center {
+        gap: 1rem;
+
+        button {
+            background: var(--primary);
+            padding: .3rem .6rem;
+        }
+    }
+
+    .blog-wrapper {
+        &.grid-4 {
+            align-items: start;
+        }
+
+        .blog-item {
+            box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+            cursor: pointer;
+            width: 300px;
+
+            &:hover {
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            }
+
+            small {
+                display: block;
+            }
+
+            img {
+                width: 300px;
+                height: 200px;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+// contact form
+.contact {
+
+    .form {
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        color: #333;
+
+        img {
+            max-width: 40vw;
+            width: 100%;
+            height: 100%;
+        }
+
+        form {
+
+
+            .form-control {
+                margin-bottom: 1rem;
+
+                input {
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid #333;
+                    display: block;
+                    width: 40vh;
+                    font-size: 1rem;
+                }
+
+                select,
+                textarea {
+                    width: 40vh;
+                    display: block;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                select {
+                    height: 2rem;
+
+                }
+
+                textarea {
+                    height: 200px;
+                    color: gray;
+                }
+            }
+
+            input[type="submit"] {
+                background: none;
+                border: none;
+                background: var(--primary);
+                padding: .5rem 1rem;
+                color: #fff;
+                border-radius: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
 
     .grid,
     .grid-4 {
@@ -863,7 +1069,6 @@ footer {
 
     h1 {
         font-size: 1.5rem;
-        word-break: keep-all;
     }
 
     .sub h1 {
@@ -1015,10 +1220,6 @@ footer {
                 width: 80vw;
                 height: fit-content;
 
-                // img {
-                //     width: 200px;
-                // }
-
                 .content.p-4 {
                     padding: 1rem;
                 }
@@ -1036,8 +1237,9 @@ footer {
     }
 
     .blogs {
-        .blog-right {
+        .right {
             width: 300px;
+            height: 100%;
 
             img {
                 width: inherit;
@@ -1061,10 +1263,47 @@ footer {
     }
 
     footer {
-        &.flex {
+        white-space: nowrap;
+
+        .flex {
             gap: 1rem;
+            align-items: flex-start;
         }
     }
+
+    .page {
+        height: 80vh;
+
+        .about {
+            padding: 0;
+
+
+            .vertical {
+                display: none;
+
+                &::before {
+                    left: 0;
+                    top: -60;
+                    writing-mode: horizontal-tb;
+                    transform: rotate(0);
+                    font-size: 3rem;
+                    color: #fff;
+                }
+            }
+
+            .concept {
+                padding: 2rem;
+                background: rgba($color:#fff, $alpha: 0.5);
+            }
+        }
+    }
+
+    .action {
+        &.width {
+            width: 90vw;
+        }
+    }
+
 
     .menu {
         .menu-filter {
@@ -1079,6 +1318,30 @@ footer {
         .menu-item {
             .flex {
                 flex-direction: row;
+            }
+        }
+    }
+
+    .bg.mb-50 {
+        margin-bottom: 60vh;
+
+        .contact {
+
+            img {
+                display: none;
+            }
+
+            form {
+                padding: 2rem 0;
+
+                .form-control {
+
+                    input,
+                    select,
+                    textarea {
+                        max-width: 70vw;
+                    }
+                }
             }
         }
     }

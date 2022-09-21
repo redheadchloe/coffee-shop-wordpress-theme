@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
 
 *,
 *::before,
@@ -44,6 +45,14 @@ h5,
 h6 {
     font-weight: normal;
     word-break: keep-all;
+}
+
+h4 {
+    word-break: normal;
+}
+
+:lang(ja) {
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 // common 
@@ -279,6 +288,7 @@ nav {
     &.shrinked {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
         position: fixed;
+        top: 0;
         width: 100vw;
         padding: 1rem;
         background: rgba($color:#333, $alpha: .3);
@@ -554,7 +564,7 @@ nav {
 .features {
 
     .feature-item {
-        width: 400px;
+        width: 350px;
         height: 300px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         position: relative;
@@ -1251,6 +1261,10 @@ footer {
         }
 
         .user {
+            &.flex-center {
+                flex-direction: row;
+            }
+
             gap: .5rem;
 
             img {
@@ -1335,10 +1349,15 @@ footer {
 
     .menu {
         .menu-filter {
+
             button {
                 &:not(:last-of-type) {
                     border-bottom: none;
                     border-right: 1px solid var(--primary);
+                }
+
+                &.flex-center {
+                    flex-direction: row;
                 }
             }
         }

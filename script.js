@@ -14,6 +14,18 @@ window.addEventListener('scroll', () => {
     }
 })
 
+const search = document.querySelector('.fa-search');
+const input = search.nextElementSibling;
+search.addEventListener('click', () => {
+    input.classList.add('on');
+})
+document.addEventListener('click', (e) => {
+    console.log(e.target.tagName);
+    if (!e.target.classList.contains('fa-search') && e.target.tagName !== 'INPUT') {
+        input.classList.remove('on');
+    }
+})
+
 // footer get year
 const date = document.querySelector('#date');
 date.innerHTML = new Date().getFullYear();

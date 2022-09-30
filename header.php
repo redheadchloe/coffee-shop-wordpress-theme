@@ -29,9 +29,12 @@
                         ];
                         wp_nav_menu($args);
                         ?> -->
-                <li style="--i:5;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
-                <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
-                <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
+                <li style="--i:5;">
+                    <?php get_search_form(); ?>
+                </li>
+                <li style="--i:6;"><a href="" class="icons"><i class="fa-brands fa-instagram"></i></a></li>
+                <li style="--i:7;"><a href="" class="icons"><i class="fa-brands fa-facebook"></i></a></li>
+                <li style="--i:8;"><a href="" class="icons"><i class="fa-brands fa-line"></i></a></li>
             </ul>
             <div class="hamburger">
                 <span></span>

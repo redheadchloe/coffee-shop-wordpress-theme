@@ -297,6 +297,36 @@ nav.global-nav {
             a.icons {
                 margin-left: 1rem;
             }
+
+            form {
+                position: relative;
+
+                i {
+                    cursor: pointer;
+                }
+
+                input {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 0;
+                    height: 1.5rem;
+                    background: none;
+                    border: none;
+                    outline: none;
+                    border-bottom: 1px solid #fff;
+                    color: #fff;
+                    transition: .4s ease-in-out;
+
+                    &.on {
+                        width: 8rem;
+                    }
+
+                }
+                ::placeholder {
+    color: #fff;
+}
+            }
         }
     }
 
@@ -1234,12 +1264,12 @@ aside {
             }
 
             li {
+                margin-bottom: 2rem;
 
                 a.links,
                 a.icons {
                     margin-right: 0;
                     margin-left: 0rem;
-                    margin-bottom: 2rem;
                 }
             }
         }

@@ -7,7 +7,7 @@
                 <?php get_template_part('template-parts/sidebar'); ?>
                 <main <?php post_class('texe-center'); ?>>
                     <small><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time></small>
-                    <h3 class="article_title my-2"><?php the_title(); ?></h3>
+                    <h3 class="my-2"><?php the_title(); ?></h3>
                     <?php if (has_post_thumbnail()) : ?>
                         <?php the_post_thumbnail('medium'); ?>
                     <?php else : ?>

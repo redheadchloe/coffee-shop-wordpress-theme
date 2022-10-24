@@ -14,7 +14,7 @@
 
 <section class="action width part">
     <h2 class="mb-2">「飲みたいコーヒーと出逢う」を実現</h2>
-    <div class="grid">
+    <div class="grid-4">
         <article class="01">
             <img src="<?php echo get_template_directory_uri(); ?>/img/action/01.jpeg" alt="">
             <p class="p-2">世界各国から厳選し届いたコーヒー鮮度と風味を保つために豆は挽かずを生豆でストック。産地に足を運び目利きした、選りすぐりの世界のコーヒーと出逢いをお客様にお届けします。</p>

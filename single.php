@@ -16,6 +16,7 @@
                     <div class="content my-2">
                         <?php the_content(); ?>
                     </div>
+                    <?php comments_template(); ?>
                 </main>
             <?php endwhile; ?>
         <?php endif; ?>

@@ -15,7 +15,7 @@
     </div>
     <div class="bg mb-10">
         <nav class="flex global-nav">
-            <a href="<?php echo home_url(); ?>">Coffee & co.</a>
+            <a href="<?php echo home_url('/'); ?>">Coffee & co.</a>
             <ul class="mobile-menu flex">
                 <li style="--i:1;"><a href="<?php echo home_url('/about/'); ?>" class="links">About</a></li>
                 <li style="--i:2;"><a href="<?php echo home_url('/menu/'); ?>" class="links">Menu</a></li>

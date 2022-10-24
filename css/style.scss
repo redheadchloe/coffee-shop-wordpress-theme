@@ -323,9 +323,10 @@ nav.global-nav {
                     }
 
                 }
+
                 ::placeholder {
-    color: #fff;
-}
+                    color: #fff;
+                }
             }
         }
     }
@@ -910,7 +911,8 @@ footer {
     img {
         max-width: 500px;
         width: 100%;
-        height: 600px;
+        max-height: 600px;
+        height: auto;
         object-fit: cover;
     }
 
@@ -948,14 +950,15 @@ footer {
     }
 
     article {
-        width: 300px;
+        max-width: 300px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
     }
 
     img {
-        width: 300px;
+        max-width: 100%;
         height: 400px;
+        width: 300px;
     }
 }
 
@@ -1154,7 +1157,7 @@ footer {
 }
 
 aside {
-    width: 100%;
+    max-width: 100%;
 
     h3 {
         color: var(--primary);
@@ -1181,7 +1184,63 @@ aside {
     }
 }
 
+section.comments {
+    padding: 5vh 0;
 
+    h3 {
+        font-size: 2rem;
+    }
+
+    label {
+        display: block;
+        margin-top: 1rem;
+    }
+
+    textarea {
+        max-width: 100%;
+    }
+
+    input[type='submit'] {
+        padding: .5rem 1rem;
+        margin-top: 1rem;
+        background: none;
+        border: 1px solid #333;
+    }
+
+    .commentlist {
+        .comment-body {
+            margin-bottom: 2rem;
+
+            .comment-author {
+                display: flex;
+                align-items: center;
+            }
+
+            .comment-meta {
+                text-align: end;
+            }
+
+            p {
+                font-size: 1.5rem;
+                padding: 2rem 0;
+            }
+
+            .reply {
+                text-align: center;
+                border: 1px solid #333;
+                padding: .4rem 2rem;
+                width: fit-content;
+                margin: auto;
+            }
+        }
+
+        .children {
+            margin-left: 2rem;
+            padding-left: 1rem;
+            border-left: 1px solid lightgray;
+        }
+    }
+}
 
 
 
@@ -1325,6 +1384,7 @@ aside {
     }
 
     .bg {
+        margin-bottom: 160px;
 
         .key {
             p {
@@ -1333,10 +1393,8 @@ aside {
         }
 
         .info {
-            margin-bottom: 160px;
 
             & ul {
-                position: absolute;
                 bottom: 0;
                 width: 100vw;
             }

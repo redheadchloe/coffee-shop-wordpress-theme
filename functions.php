@@ -118,6 +118,30 @@ function cpt_another_taxonomy()
 }
 add_action('init', 'cpt_another_taxonomy');
 
+// customize search results
+function filter_search_results($query)
+{
+    if ($query->is_main_query() && is_search() && !is_admin()) {
+        $query->set('post_type', 'post');
+        $query->set('orderby', 'category');
+        $query->set('posts_per_page', 8);
+        // $query->set('category', 'all');
+    }
+    return $query;
+}
+add_filter('pre_get_posts', 'filter_search_results');
+
+// comment section
+add_filter('comment_form_default_fields', 'my_comment_form_default_fields');
+function my_comment_form_default_fields($args)
+{
+    $args['url'] = '';
+    $args['author'] = '';
+    $args['email'] = '';
+    $args['cookies'] = '';
+    return $args;
+}
+
 
 
 add_action('wp', 'my_wpautop');
